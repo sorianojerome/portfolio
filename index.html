@@ -10,7 +10,7 @@
 </head>
 
 <body class="bg-white dark:bg-black">
-    
+
     <nav class="bg-gray-100 p-3 border-l-8 border-green-700">
         <div class="md:flex justify-around">
             <div>
@@ -104,9 +104,9 @@
                 </p>
             </div>
             <div class="flex lg:justify-center">
-                <button id="bSendEmail"
-                    class="inline-flex px-6 py-2 font-semibold text-white transition duration-500 ease-in-out transform bg-black rounded-lg hover:bg-gray-800 hover:to-black focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2">Send
-                    Me An Email</button>
+                <a id="bSendEmail"
+                    class="inline-flex px-6 py-2 font-semibold text-white transition duration-500 ease-in-out transform bg-black rounded-lg hover:bg-gray-800 hover:to-black focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2 cursor-pointer">Send
+                    Me An Email</a>
                 <!-- <button class="inline-flex items-center px-6 py-2 ml-4 font-semibold text-black transition duration-500 ease-in-out transform bg-white border rounded-lg shadow-xl hover:border-gray-600 hover:bg-gray-600 hover:text-white focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2">Button</button> -->
             </div>
     </section>
@@ -137,13 +137,14 @@
                         my experience, skills and capabilities of handling jobs in an organized and timely manner. Your
                         trust will be my confidence so if you give me your 100% trust, I will give you my 100% best.
                     </p>
-                    <a href="skills.html#skills"
-                        class="font-bold text-gray-800 mt-8">Check out my programming skills here!</a>
+                    <a href="skills.html#skills" class="font-bold text-gray-800 mt-8">Check out my programming skills
+                        here!</a>
                 </div>
                 <div class="w-full md:w-4/12 px-4 mr-auto ml-auto">
                     <div
                         class="relative flex flex-col min-w-0 break-word w-full mb-6 shadow-lg rounded-lg bg-green-600">
-                        <img alt="STI College Sta Cruz" src="img/stistacruz.jpg" class="w-full align-middle rounded-t-lg" />
+                        <img alt="STI College Sta Cruz" src="img/stistacruz.jpg"
+                            class="w-full align-middle rounded-t-lg" />
                         <blockquote class="relative p-8 mb-4">
                             <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 583 95"
                                 class="absolute left-0 w-full block" style="height: 95px; top: -94px;">
@@ -290,7 +291,12 @@
             window.location.href = "contact.html";
         });
         $("#bSendEmail").click(function () {
-            alert("Sending Email!");
+            //event.preventDefault();
+            alert("Sending mailto: to outlook app!");
+            var email = 'sorianojerome@hotmail.com';
+            var subject = 'Inquiry';
+            var emailBody = 'Hello!';
+            window.location = 'mailto:' + email + '?subject=' + subject + '&body=' +   emailBody;
         });
     </script>
 
