@@ -82,11 +82,11 @@
     <!-- INTRO SECTION -->
     <section id="intro" class="text-gray-700 body-font bg-green-700">
         <div class="container flex flex-col items-start px-5 py-16 mx-auto lg:items-center md:flex-row lg:px-28">
-            <div class="w-full mb-10 lg:w-5/6 lg:max-w-lg md:w-1/2">
+            <div id="intro-image" class="w-full mb-10 lg:w-5/6 lg:max-w-lg md:w-1/2">
                 <img class="object-cover object-center rounded" alt="hero"
                     src="img/First-Flight-departure-going-to-Saudi-Riyadh.jpg">
             </div>
-            <div class="flex flex-col items-start text-left lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16">
+            <div id="intro-desc" class="flex flex-col items-start text-left lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16">
                 <h2 class="mb-1 text-xs font-medium tracking-widest text-blue-200 title-font">Skills and hobbies</h2>
                 <h1 class="mb-8 text-2xl font-bold tracking-tighter text-left text-white title-font">
                     Hello there! I am Jerome!</h1>
@@ -277,7 +277,22 @@
 
                     <div class="w-1/4 p-4 mt-4 md:w-1/4">
                         <!-- SVG TAILWIND -->
-                        <svg width="42" height="42" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 66 40" fill="#fff" fill-rule="evenodd" stroke="#000" stroke-linecap="round" stroke-linejoin="round"><use xlink:href="#B" x=".5" y=".5"/><defs><linearGradient x1="0.00%" y1="-88.89%" y2="188.89%" id="A" x2="100.00%"><stop stop-color="#2383ae" offset="0%"/><stop stop-color="#6dd7b9" offset="100%"/></linearGradient></defs><symbol id="B" overflow="visible"><path d="M16 12.8C18.133 4.267 23.467 0 32 0c12.8 0 14.4 9.6 20.8 11.2 4.267 1.067 8-.533 11.2-4.8-2.133 8.533-7.467 12.8-16 12.8-12.8 0-14.4-9.6-20.8-11.2-4.267-1.067-8 .533-11.2 4.8zM0 32c2.133-8.533 7.467-12.8 16-12.8 12.8 0 14.4 9.6 20.8 11.2 4.267 1.067 8-.533 11.2-4.8-2.133 8.533-7.467 12.8-16 12.8-12.8 0-14.4-9.6-20.8-11.2-4.267-1.067-8 .533-11.2 4.8z" stroke="none" fill="url(#A)"/></symbol></svg>
+                        <svg width="42" height="42" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 66 40" fill="#fff"
+                            fill-rule="evenodd" stroke="#000" stroke-linecap="round" stroke-linejoin="round">
+                            <use xlink:href="#B" x=".5" y=".5" />
+                            <defs>
+                                <linearGradient x1="0.00%" y1="-88.89%" y2="188.89%" id="A" x2="100.00%">
+                                    <stop stop-color="#2383ae" offset="0%" />
+                                    <stop stop-color="#6dd7b9" offset="100%" />
+                                </linearGradient>
+                            </defs>
+                            <symbol id="B" overflow="visible">
+                                <path
+                                    d="M16 12.8C18.133 4.267 23.467 0 32 0c12.8 0 14.4 9.6 20.8 11.2 4.267 1.067 8-.533 11.2-4.8-2.133 8.533-7.467 12.8-16 12.8-12.8 0-14.4-9.6-20.8-11.2-4.267-1.067-8 .533-11.2 4.8zM0 32c2.133-8.533 7.467-12.8 16-12.8 12.8 0 14.4 9.6 20.8 11.2 4.267 1.067 8-.533 11.2-4.8-2.133 8.533-7.467 12.8-16 12.8-12.8 0-14.4-9.6-20.8-11.2-4.267-1.067-8 .533-11.2 4.8z"
+                                    stroke="none" fill="url(#A)" />
+                            </symbol>
+                        </svg>
                     </div>
 
 
@@ -294,7 +309,7 @@
     <section id="skills" class="bg-gray-200 border-l-8 border-b-8 border-green-700 py-16 md:px-32">
 
         <!-- WEB DEVELOPMENT SKILLS -->
-        <div class="relative p-4 m-1">
+        <div id="skills-web" class="relative p-4 m-1">
             <h2 class="text-green-800 font-bold">Web Development Skills</h2>
             <div class="flex mt-2 items-center justify-between">
                 <div>
@@ -370,7 +385,7 @@
         </div>
 
         <!-- PROGRAMMING SKILLS -->
-        <div class="relative p-4 m-1">
+        <div id="skills-pl" class="relative p-4 m-1">
             <h2 class="text-green-800 font-bold">Programming Skills</h2>
             <div class="flex mt-2 items-center justify-between">
                 <div>
@@ -387,7 +402,8 @@
             </div>
             <div class="h-4 relative rounded-full overflow-hidden">
                 <div class="w-full h-full bg-gray-300 absolute"></div>
-                <div id="sk_asterisk" class="w-0 h-full bg-green-500 relative transition-all ease-out duration-1000"></div>
+                <div id="sk_asterisk" class="w-0 h-full bg-green-500 relative transition-all ease-out duration-1000">
+                </div>
             </div>
 
             <div class="flex mt-2 items-center justify-between">
@@ -423,14 +439,15 @@
             </div>
             <div class="h-4 relative rounded-full overflow-hidden">
                 <div class="w-full h-full bg-gray-300 absolute"></div>
-                <div id="sk_csharp" class="w-0 h-full bg-green-500 relative transition-all ease-out duration-1000"></div>
+                <div id="sk_csharp" class="w-0 h-full bg-green-500 relative transition-all ease-out duration-1000">
+                </div>
             </div>
-            
-            
+
+
         </div>
 
         <!-- DATABASE SKILLS -->
-        <div class="relative p-4 m-1">
+        <div id="skills-db" class="relative p-4 m-1">
             <h2 class="text-green-800 font-bold">Database Skills</h2>
             <div class="flex mt-2 items-center justify-between">
                 <div>
@@ -465,7 +482,8 @@
             </div>
             <div class="h-4 relative rounded-full overflow-hidden">
                 <div class="w-full h-full bg-gray-300 absolute"></div>
-                <div id="sk_sqlsrv" class="w-0 h-full bg-green-500 relative transition-all ease-out duration-1000"></div>
+                <div id="sk_sqlsrv" class="w-0 h-full bg-green-500 relative transition-all ease-out duration-1000">
+                </div>
             </div>
 
             <div class="flex mt-2 items-center justify-between">
@@ -662,6 +680,80 @@
             bar_db3.classList.add('w-full');
             bar_db3.style.width = "60%";
         });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js"
+        integrity="sha512-Kr+RPfLjQ71E0cJ9nseJ6jwTrnmMnuSPnnsVQQ/ZYYCjOHKfJcWj8ILICXnvf9A7ZQChNzIbr9x/ZAxA6xAZlQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- SCROLL REVEAL -->
+    <script>
+        var slideRight = {
+            distance: '120%',
+            origin: 'left',
+            delay: 400,
+            reset: true,
+        };
+        var slideLeft = {
+            distance: '120%',
+            origin: 'right',
+            delay: 400,
+            reset: true,
+        };
+        var slideUp = {
+            distance: '120%',
+            origin: 'bottom',
+            delay: 400,
+            reset: true,
+        };
+        var slideDown = {
+            distance: '120%',
+            origin: 'top',
+            delay: 400,
+            reset: true,
+        };
+
+        var navDelay = 200;
+        var slideNav = {
+            distance: '150%',
+            origin: 'right',
+            delay: navDelay,
+        };
+
+        // HEADER NAVIGATIONS
+        ScrollReveal().reveal('figure', {
+            distance: '150%',
+            origin: 'left',
+            delay: 400
+        });
+        ScrollReveal().reveal('#navHome', slideNav);
+        navDelay = navDelay + 200;
+        slideNav.delay = navDelay;
+        ScrollReveal().reveal('#navServices', slideNav);
+        navDelay = navDelay + 200;
+        slideNav.delay = navDelay;
+        ScrollReveal().reveal('#navSkills', slideNav);
+        navDelay = navDelay + 200;
+        slideNav.delay = navDelay;
+        ScrollReveal().reveal('#navMusic', slideNav);
+        navDelay = navDelay + 200;
+        slideNav.delay = navDelay;
+        ScrollReveal().reveal('#navProjects', slideNav);
+        navDelay = navDelay + 200;
+        slideNav.delay = navDelay;
+        ScrollReveal().reveal('#navAbout', slideNav);
+        navDelay = navDelay + 200;
+        slideNav.delay = navDelay;
+        ScrollReveal().reveal('#navContact', slideNav);
+
+        // SECTIONS
+        ScrollReveal().reveal('#intro-image', slideRight);
+        ScrollReveal().reveal('#intro-desc', slideLeft);
+
+        ScrollReveal().reveal('#skills-web', slideRight);
+        ScrollReveal().reveal('#skills-pl', slideRight);
+        ScrollReveal().reveal('#skills-db', slideRight);
+
     </script>
 
 </body>

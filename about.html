@@ -83,23 +83,25 @@
 
     <!-- ABOUT ME -->
     <section class="text-gray-100 bg-green-700 body-font">
-        <h2 class="p-4 text-2xl">Personality</h2>
+        <h2 id="about-personality" class="p-4 text-2xl">Personality</h2>
         <!-- component -->
-        <ul class="list-reset flex flex-col px-1 md:px-24 text-sm md:text-base">
+        <ul id="about-list" class="list-reset flex flex-col px-1 md:px-24 text-sm md:text-base">
             <li class="rounded-t relative -mb-px block border p-4 border-grey">• God first before everything else.</li>
             <li class="relative -mb-px block border p-4 border-grey">• Good communication skills.</li>
             <li class="relative -mb-px block border p-4 border-grey">• Team player and leader.</li>
             <li class="relative -mb-px block border p-4 border-grey">• Works with less supervision.</li>
-            <li class="relative -mb-px block border p-4 border-grey">• Self-learner and quick to adapt new technologies.</li>
+            <li class="relative -mb-px block border p-4 border-grey">• Self-learner and quick to adapt new technologies.
+            </li>
             <li class="relative -mb-px block border p-4 border-grey">• Well-organized person.</li>
-            <li class="rounded-b relative block border p-4 border-grey">• Exceptional writing and documentation skills.</li>
+            <li class="rounded-b relative block border p-4 border-grey">• Exceptional writing and documentation skills.
+            </li>
         </ul>
 
         <h2 class="p-4 text-2xl mt-8">Educational and Professional Experience</h2>
         <div class="relative w-full p-8">
             <div class="border-r-2 border-green-500 absolute h-full top-0" style="left: 47px"></div>
             <ul class="list-none m-0 p-0">
-                <li class="mb-10">
+                <li id="educ-1" class="mb-10">
                     <div class="flex">
                         <div class="bg-blue-200 rounded-full h-8 w-8 z-20 text-center">
                             <span class="inline-block align-middle text-green-800 font-bold">E</span></div>
@@ -116,7 +118,7 @@
                     </div>
                 </li>
 
-                <li class="mb-10">
+                <li id="prof-1" class="mb-10">
                     <div class="flex">
                         <div class="bg-blue-200 rounded-full h-8 w-8 z-20 text-center">
                             <span class="inline-block align-middle text-green-800 font-bold">P</span></div>
@@ -133,7 +135,7 @@
                     </div>
                 </li>
 
-                <li class="mb-10">
+                <li id="prof-2" class="mb-10">
                     <div class="flex">
                         <div class="bg-blue-200 rounded-full h-8 w-8 z-20 text-center">
                             <span class="inline-block align-middle text-green-800 font-bold">P</span></div>
@@ -276,6 +278,79 @@
         $("#bSendEmail").click(function () {
             alert("Sending Email!");
         });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js"
+        integrity="sha512-Kr+RPfLjQ71E0cJ9nseJ6jwTrnmMnuSPnnsVQQ/ZYYCjOHKfJcWj8ILICXnvf9A7ZQChNzIbr9x/ZAxA6xAZlQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- SCROLL REVEAL -->
+    <script>
+        var slideRight = {
+            distance: '120%',
+            origin: 'left',
+            delay: 400,
+            reset: true,
+        };
+        var slideLeft = {
+            distance: '120%',
+            origin: 'right',
+            delay: 400,
+            reset: true,
+        };
+        var slideUp = {
+            distance: '120%',
+            origin: 'bottom',
+            delay: 400,
+            reset: true,
+        };
+        var slideDown = {
+            distance: '120%',
+            origin: 'top',
+            delay: 400,
+            reset: true,
+        };
+
+        var navDelay = 200;
+        var slideNav = {
+            distance: '150%',
+            origin: 'right',
+            delay: navDelay,
+        };
+
+        // HEADER NAVIGATIONS
+        ScrollReveal().reveal('figure', {
+            distance: '150%',
+            origin: 'left',
+            delay: 400
+        });
+        ScrollReveal().reveal('#navHome', slideNav);
+        navDelay = navDelay + 200;
+        slideNav.delay = navDelay;
+        ScrollReveal().reveal('#navServices', slideNav);
+        navDelay = navDelay + 200;
+        slideNav.delay = navDelay;
+        ScrollReveal().reveal('#navSkills', slideNav);
+        navDelay = navDelay + 200;
+        slideNav.delay = navDelay;
+        ScrollReveal().reveal('#navMusic', slideNav);
+        navDelay = navDelay + 200;
+        slideNav.delay = navDelay;
+        ScrollReveal().reveal('#navProjects', slideNav);
+        navDelay = navDelay + 200;
+        slideNav.delay = navDelay;
+        ScrollReveal().reveal('#navAbout', slideNav);
+        navDelay = navDelay + 200;
+        slideNav.delay = navDelay;
+        ScrollReveal().reveal('#navContact', slideNav);
+
+        // SECTIONS
+        ScrollReveal().reveal('#about-personality', slideRight);
+        ScrollReveal().reveal('#about-list', slideLeft);
+
+        ScrollReveal().reveal('#educ-1', slideUp);
+        ScrollReveal().reveal('#prof-1', slideUp);
+        ScrollReveal().reveal('#prof-2', slideUp);
     </script>
 
 </body>

@@ -10,7 +10,7 @@
 </head>
 
 <body class="bg-white dark:bg-black">
-    
+
     <nav class="bg-gray-100 p-3 border-l-8 border-green-700">
         <div class="md:flex justify-around">
             <div>
@@ -35,8 +35,7 @@
 
             <div class="grid grid-cols-10 grid-rows-4 gap-1">
                 <div class="bg-gray-200 col-span-3 flex justify-center items-center">
-                    <button id="navHome"
-                        class="bg-green-700 text-gray-50 w-full h-full rounded">HOME</button>
+                    <button id="navHome" class="bg-green-700 text-gray-50 w-full h-full rounded">HOME</button>
                 </div>
                 <div class="bg-gray-200 w-12"></div>
                 <div class="bg-gray-200"></div>
@@ -51,7 +50,8 @@
                 </div>
                 <div class="bg-gray-200"></div>
                 <div class="bg-gray-200 col-span-3 flex justify-center items-center">
-                    <button id="navMusic" class="bg-green-700 text-gray-50 w-full h-full animate-pulse rounded">MUSIC</button>
+                    <button id="navMusic"
+                        class="bg-green-700 text-gray-50 w-full h-full animate-pulse rounded">MUSIC</button>
                 </div>
                 <div class="bg-gray-200"></div>
                 <div class="bg-gray-200"></div>
@@ -83,13 +83,15 @@
 
     <!-- SPOTIFY -->
     <section class="text-gray-100  bg-green-700 body-font">
-        <h1 class="text-lg font-bold tracking-tighter text-center pt-8 px-2">Music is <span class="text-blue-300">one of the best</span> way to know someone better. Try to listen now!</h1>
-        <div class="flex md:px-16 py-8">
+        <h1 id="music-title" class="text-lg font-bold tracking-tighter text-center pt-8 px-2">Music is <span class="text-blue-300">one of
+                the best</span> way to know someone better. Try to listen now!</h1>
+        <div id="spotify" class="flex md:px-16 py-8">
             <div class="mt-2 border-4 rounded-md flex-auto mx-2">
-                <iframe class="rounded-md w-full" src="https://open.spotify.com/embed/playlist/0h7ZWv7USqofZV7N0S8sLn" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                <iframe class="rounded-md w-full" src="https://open.spotify.com/embed/playlist/0h7ZWv7USqofZV7N0S8sLn"
+                    height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
             </div>
         </div>
-        
+
     </section>
 
 
@@ -212,7 +214,76 @@
             alert("Sending Email!");
         });
     </script>
-    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js"
+        integrity="sha512-Kr+RPfLjQ71E0cJ9nseJ6jwTrnmMnuSPnnsVQQ/ZYYCjOHKfJcWj8ILICXnvf9A7ZQChNzIbr9x/ZAxA6xAZlQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- SCROLL REVEAL -->
+    <script>
+        var slideRight = {
+            distance: '120%',
+            origin: 'left',
+            delay: 400,
+            reset: true,
+        };
+        var slideLeft = {
+            distance: '120%',
+            origin: 'right',
+            delay: 400,
+            reset: true,
+        };
+        var slideUp = {
+            distance: '120%',
+            origin: 'bottom',
+            delay: 400,
+            reset: true,
+        };
+        var slideDown = {
+            distance: '120%',
+            origin: 'top',
+            delay: 400,
+            reset: true,
+        };
+
+        var navDelay = 200;
+        var slideNav = {
+            distance: '150%',
+            origin: 'right',
+            delay: navDelay,
+        };
+
+        // HEADER NAVIGATIONS
+        ScrollReveal().reveal('figure', {
+            distance: '150%',
+            origin: 'left',
+            delay: 400
+        });
+        ScrollReveal().reveal('#navHome', slideNav);
+        navDelay = navDelay + 200;
+        slideNav.delay = navDelay;
+        ScrollReveal().reveal('#navServices', slideNav);
+        navDelay = navDelay + 200;
+        slideNav.delay = navDelay;
+        ScrollReveal().reveal('#navSkills', slideNav);
+        navDelay = navDelay + 200;
+        slideNav.delay = navDelay;
+        ScrollReveal().reveal('#navMusic', slideNav);
+        navDelay = navDelay + 200;
+        slideNav.delay = navDelay;
+        ScrollReveal().reveal('#navProjects', slideNav);
+        navDelay = navDelay + 200;
+        slideNav.delay = navDelay;
+        ScrollReveal().reveal('#navAbout', slideNav);
+        navDelay = navDelay + 200;
+        slideNav.delay = navDelay;
+        ScrollReveal().reveal('#navContact', slideNav);
+
+        // SECTIONS
+        ScrollReveal().reveal('#music-title', slideUp);
+        ScrollReveal().reveal('#spotify', slideUp);
+    </script>
+
 </body>
 
 </html>

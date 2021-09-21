@@ -84,7 +84,7 @@
     <!-- CONTACT FORM -->
 
     <section class="text-gray-100 bg-green-700 body-font">
-        <div class="container items-center px-2 py-4 md:px-20">
+        <div id="get-in-touch" class="container items-center px-2 py-4 md:px-20">
             <form id="contactForm"
                 class="flex flex-col w-full px-4 pt-4 md:px-8 md:py-6 mx-auto my-6 mb-4 transition duration-500 ease-in-out transform bg-white border rounded-lg lg:w-1/2">
                 <div class="mb-4">
@@ -289,6 +289,74 @@
         $("#bSendEmail").click(function () {
             alert("Sending Email!");
         });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js"
+        integrity="sha512-Kr+RPfLjQ71E0cJ9nseJ6jwTrnmMnuSPnnsVQQ/ZYYCjOHKfJcWj8ILICXnvf9A7ZQChNzIbr9x/ZAxA6xAZlQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- SCROLL REVEAL -->
+    <script>
+        var slideRight = {
+            distance: '120%',
+            origin: 'left',
+            delay: 400,
+            reset: true,
+        };
+        var slideLeft = {
+            distance: '120%',
+            origin: 'right',
+            delay: 400,
+            reset: true,
+        };
+        var slideUp = {
+            distance: '120%',
+            origin: 'bottom',
+            delay: 400,
+            reset: true,
+        };
+        var slideDown = {
+            distance: '120%',
+            origin: 'top',
+            delay: 400,
+            reset: true,
+        };
+
+        var navDelay = 200;
+        var slideNav = {
+            distance: '150%',
+            origin: 'right',
+            delay: navDelay,
+        };
+
+        // HEADER NAVIGATIONS
+        ScrollReveal().reveal('figure', {
+            distance: '150%',
+            origin: 'left',
+            delay: 400
+        });
+        ScrollReveal().reveal('#navHome', slideNav);
+        navDelay = navDelay + 200;
+        slideNav.delay = navDelay;
+        ScrollReveal().reveal('#navServices', slideNav);
+        navDelay = navDelay + 200;
+        slideNav.delay = navDelay;
+        ScrollReveal().reveal('#navSkills', slideNav);
+        navDelay = navDelay + 200;
+        slideNav.delay = navDelay;
+        ScrollReveal().reveal('#navMusic', slideNav);
+        navDelay = navDelay + 200;
+        slideNav.delay = navDelay;
+        ScrollReveal().reveal('#navProjects', slideNav);
+        navDelay = navDelay + 200;
+        slideNav.delay = navDelay;
+        ScrollReveal().reveal('#navAbout', slideNav);
+        navDelay = navDelay + 200;
+        slideNav.delay = navDelay;
+        ScrollReveal().reveal('#navContact', slideNav);
+
+        // SECTIONS
+        ScrollReveal().reveal('#get-in-touch', slideUp);
     </script>
 
     <script>

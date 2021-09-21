@@ -84,7 +84,7 @@
     <section class="text-gray-100 bg-green-700">
         <div class="container px-8 mx-auto py-16 lg:px-16">
             <div class="flex flex-wrap text-left">
-                <div class="px-2 py-6 lg:w-1/3 md:w-full">
+                <div id="grid-personal" class="px-2 py-6 lg:w-1/3 md:w-full">
                     <div class="flex items-center mb-3 md:justify-center lg:justify-start">
                         <div
                             class="inline-flex items-center justify-center flex-shrink-0 w-12 h-12 mb-5 mr-3 text-blue-800 bg-gray-200 rounded-full">
@@ -137,7 +137,7 @@
                         </svg>
                     </a>
                 </div>
-                <div class="px-2 py-6 lg:w-1/3 md:w-full">
+                <div id="grid-business" class="px-2 py-6 lg:w-1/3 md:w-full">
                     <div class="flex items-center mb-3 md:justify-center lg:justify-start">
                         <div
                             class="inline-flex items-center justify-center flex-shrink-0 w-12 h-12 mb-5 mr-3 text-blue-800 bg-gray-200 rounded-full">
@@ -191,7 +191,7 @@
                         </svg>
                     </a>
                 </div>
-                <div class="px-2 py-6 lg:w-1/3 md:w-full">
+                <div id="grid-webapp" class="px-2 py-6 lg:w-1/3 md:w-full">
                     <div class="flex items-center mb-3 md:justify-center lg:justify-start">
                         <div
                             class="inline-flex items-center justify-center flex-shrink-0 w-12 h-12 mb-5 mr-3 text-blue-800 bg-gray-200 rounded-full">
@@ -238,11 +238,10 @@
     <!-- PERSONAL WEBSITE CONTENT -->
     <section id="anc-personal" class="bg-gray-300 border-l-8 border-b-8 border-green-700">
         <div class="container flex flex-col items-start px-5 py-16 mx-auto lg:items-center md:flex-row lg:px-28">
-            <div class="w-full mb-10 lg:w-5/6 lg:max-w-lg md:w-1/2">
-                <img class="object-cover object-center rounded" alt="hero"
-                    src="img/personalwebsitesample.jpg">
+            <div id="personal-left" class="w-full mb-10 lg:w-5/6 lg:max-w-lg md:w-1/2">
+                <img class="object-cover object-center rounded" alt="hero" src="img/personalwebsitesample.jpg">
             </div>
-            <div class="flex flex-col items-start text-left lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16">
+            <div id="personal-right" class="flex flex-col items-start text-left lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16">
                 <h2 class="mb-1 text-xs font-medium tracking-widest text-blue-600 title-font">Feel Free To Know Me
                     Better!
                 </h2>
@@ -301,8 +300,7 @@
     <!-- BUSINESS WEBSITE CONTENT -->
     <section id="anc-business" class="text-gray-100  bg-green-700 body-font">
         <div class="container flex flex-col items-center px-5 py-16 mx-auto md:flex-row lg:px-28">
-            <div
-                class="flex flex-col items-start w-full pt-0 mb-16 text-left lg:flex-grow md:w-1/2 xl:mr-20 md:pr-24 md:mb-0 ">
+            <div id="business-left" class="flex flex-col items-start w-full pt-0 mb-16 text-left lg:flex-grow md:w-1/2 xl:mr-20 md:pr-24 md:mb-0 ">
                 <h2 class="mb-1 text-xs font-medium tracking-widest text-blue-200 title-font">I'm Not Gonna Pay A Lot
                     For This Success!
                 </h2>
@@ -356,9 +354,8 @@
                     </span>Full of information.
                 </p>
             </div>
-            <div class="w-full lg:w-5/6 lg:max-w-lg md:w-1/2">
-                <img class="object-cover object-center rounded-lg " alt="hero"
-                    src="img/businesswebsitesample.jpg">
+            <div id="business-right" class="w-full lg:w-5/6 lg:max-w-lg md:w-1/2">
+                <img class="object-cover object-center rounded-lg " alt="hero" src="img/businesswebsitesample.jpg">
             </div>
         </div>
     </section>
@@ -366,11 +363,11 @@
     <!-- WEB APPLICATION CONTENT -->
     <section id="anc-webapp" class="bg-gray-300 border-l-8 border-b-8 border-green-700">
         <div class="container flex flex-col items-start px-5 py-16 mx-auto lg:items-center md:flex-row lg:px-28">
-            <div class="w-full mb-10 lg:w-5/6 lg:max-w-lg md:w-1/2">
+            <div id="webapp-left" class="w-full mb-10 lg:w-5/6 lg:max-w-lg md:w-1/2">
                 <img class="object-cover object-center rounded" alt="hero"
                     src="https://dummyimage.com/720x600/F3F4F7/8693ac">
             </div>
-            <div class="flex flex-col items-start text-left lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16">
+            <div id="webapp-right" class="flex flex-col items-start text-left lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16">
                 <h2 class="mb-1 text-xs font-medium tracking-widest text-blue-600 title-font">Let This Thing Do The Job
                     The Way You Want The Job To Be Done!
                 </h2>
@@ -537,6 +534,83 @@
         $("#bSendEmail").click(function () {
             alert("Sending Email!");
         });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js"
+        integrity="sha512-Kr+RPfLjQ71E0cJ9nseJ6jwTrnmMnuSPnnsVQQ/ZYYCjOHKfJcWj8ILICXnvf9A7ZQChNzIbr9x/ZAxA6xAZlQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- SCROLL REVEAL -->
+    <script>
+        var slideRight = {
+            distance: '120%',
+            origin: 'left',
+            delay: 400,
+            reset: true,
+        };
+        var slideLeft = {
+            distance: '120%',
+            origin: 'right',
+            delay: 400,
+            reset: true,
+        };
+        var slideUp = {
+            distance: '120%',
+            origin: 'bottom',
+            delay: 400,
+            reset: true,
+        };
+        var slideDown = {
+            distance: '120%',
+            origin: 'top',
+            delay: 400,
+            reset: true,
+        };
+
+        var navDelay = 200;
+        var slideNav = {
+            distance: '150%',
+            origin: 'right',
+            delay: navDelay,
+        };
+
+        // HEADER NAVIGATIONS
+        ScrollReveal().reveal('figure', {
+            distance: '150%',
+            origin: 'left',
+            delay: 400
+        });
+        ScrollReveal().reveal('#navHome', slideNav);
+        navDelay = navDelay + 200;
+        slideNav.delay = navDelay;
+        ScrollReveal().reveal('#navServices', slideNav);
+        navDelay = navDelay + 200;
+        slideNav.delay = navDelay;
+        ScrollReveal().reveal('#navSkills', slideNav);
+        navDelay = navDelay + 200;
+        slideNav.delay = navDelay;
+        ScrollReveal().reveal('#navMusic', slideNav);
+        navDelay = navDelay + 200;
+        slideNav.delay = navDelay;
+        ScrollReveal().reveal('#navProjects', slideNav);
+        navDelay = navDelay + 200;
+        slideNav.delay = navDelay;
+        ScrollReveal().reveal('#navAbout', slideNav);
+        navDelay = navDelay + 200;
+        slideNav.delay = navDelay;
+        ScrollReveal().reveal('#navContact', slideNav);
+
+        // SECTIONS
+        ScrollReveal().reveal('#grid-personal', slideUp);
+        ScrollReveal().reveal('#grid-business', slideUp);
+        ScrollReveal().reveal('#grid-webapp', slideUp);
+
+        ScrollReveal().reveal('#personal-left', slideRight);
+        ScrollReveal().reveal('#personal-right', slideLeft);
+        ScrollReveal().reveal('#business-left', slideRight);
+        ScrollReveal().reveal('#business-right', slideLeft);
+        ScrollReveal().reveal('#webapp-left', slideRight);
+        ScrollReveal().reveal('#webapp-right', slideLeft);
     </script>
 
 </body>
