@@ -303,64 +303,71 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js"
         integrity="sha512-Kr+RPfLjQ71E0cJ9nseJ6jwTrnmMnuSPnnsVQQ/ZYYCjOHKfJcWj8ILICXnvf9A7ZQChNzIbr9x/ZAxA6xAZlQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    
+
     <!-- SCROLL REVEAL -->
     <script>
         var slideRight = {
-            distance: '120%',
             origin: 'left',
             delay: 400,
             reset: true,
         };
         var slideLeft = {
-            distance: '120%',
             origin: 'right',
             delay: 400,
             reset: true,
         };
         var slideUp = {
-            distance: '120%',
             origin: 'bottom',
             delay: 400,
             reset: true,
         };
         var slideDown = {
-            distance: '120%',
             origin: 'top',
             delay: 400,
             reset: true,
         };
-        
+
         var navDelay = 200;
         var slideNav = {
             distance: '150%',
             origin: 'right',
             delay: navDelay,
         };
-        
+
         // HEADER NAVIGATIONS
-        ScrollReveal().reveal('figure', { distance: '150%', origin: 'left', delay: 400 });
+        ScrollReveal().reveal('figure', {
+            distance: '150%',
+            origin: 'left',
+            delay: 400
+        });
         ScrollReveal().reveal('#navHome', slideNav);
-        navDelay = navDelay + 200; slideNav.delay = navDelay;
+        navDelay = navDelay + 200;
+        slideNav.delay = navDelay;
         ScrollReveal().reveal('#navServices', slideNav);
-        navDelay = navDelay + 200; slideNav.delay = navDelay;
+        navDelay = navDelay + 200;
+        slideNav.delay = navDelay;
         ScrollReveal().reveal('#navSkills', slideNav);
-        navDelay = navDelay + 200; slideNav.delay = navDelay;
+        navDelay = navDelay + 200;
+        slideNav.delay = navDelay;
         ScrollReveal().reveal('#navMusic', slideNav);
-        navDelay = navDelay + 200; slideNav.delay = navDelay;
+        navDelay = navDelay + 200;
+        slideNav.delay = navDelay;
         ScrollReveal().reveal('#navProjects', slideNav);
-        navDelay = navDelay + 200; slideNav.delay = navDelay;
+        navDelay = navDelay + 200;
+        slideNav.delay = navDelay;
         ScrollReveal().reveal('#navAbout', slideNav);
-        navDelay = navDelay + 200; slideNav.delay = navDelay;
+        navDelay = navDelay + 200;
+        slideNav.delay = navDelay;
         ScrollReveal().reveal('#navContact', slideNav);
-        
+
         // SECTIONS
         ScrollReveal().reveal('.section-quotation', slideUp);
         ScrollReveal().reveal('.story-left', slideRight);
         ScrollReveal().reveal('.story-right', slideLeft);
     </script>
 
-    <script id="60abc2e374e23346b1f0e622" src="https://dashboard.chatfuel.com/integration/fb-entry-point.js" async defer></script>
+    <script id="60abc2e374e23346b1f0e622" src="https://dashboard.chatfuel.com/integration/fb-entry-point.js" async
+        defer></script>
 </body>
 
 </html>
